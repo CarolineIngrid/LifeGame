@@ -27,6 +27,7 @@ def update(screen, cells, size, with_progress=False):
                 updated_cells[row, col] = 1
                 if with_progress:
                     color = COLOR_ALIVE_NEXT
+
         pygame.draw.rect(screen, color, (col * size, row * size, size -1, size -1))
 
     return updated_cells
@@ -42,7 +43,7 @@ def main():
     pygame.display.flip()
     pygame.display.update()
 
-    running - False
+    running = False
 
     while True:
         for event in pygame.event.get():
